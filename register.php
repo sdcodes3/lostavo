@@ -13,25 +13,48 @@
 </head>
 <body class="d-flex position-relative">
     <div class="container-fluid d-flex align-items-center justify-content-center p-0">
-        <form action="controllers/login.php" method="POST" class="loginForm w-100 d-flex justify-content-center">
+        <form action="controllers/register.php" method="POST" class="loginForm w-100 d-flex justify-content-center" enctype="multipart/form-data">
             <div class="d-flex flex-column p-3 p-md-5 col-12 col-md-6 col-xxl-4">
                 <div class="heading text-center">
                     SignUp Page
                 </div>
                 <div class="pt-4">
-                    Email : 
+                    Name : 
                     <input type="text" class="form-control" name="uname" id="">
+                </div>
+                <div class="pt-4">
+                    Email : 
+                    <input type="text" class="form-control" name="umail" id="">
                 </div>
                 <div class="pt-4">
                     Password : 
                     <input type="password" class="form-control" name="pass" id="">
                 </div>
-                <div class="d-flex justify-content-end pt-4">
-                    <input type="submit" value="Login" class="btn rounded-pill text-white bg-green w-100 rounded-0" name="submit">
+                <div class="pt-4">
+                    City : 
+                    <select name="city" id="" class="form-select">
+                        <option value="Ahmedabad">Ahmedabad</option>
+                        <option value="Rajkot">Rajkot</option>
+                        <option value="Jamnagar">Jamnagar</option>
+                    </select>
                 </div>
-                <div class="text-end d-flex justify-content-between pt-4 flex-wrap">
-                    <div><a href="#" class="text-danger">Forgot Password?</a></div>
-                    <div>Not Yet Registered? <a href="#" class="text-success">Register Here</a></div>
+                <div class="pt-4">
+                    State : 
+                    <select name="state" id="" class="form-select">
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                    </select>
+                </div>
+                <div class="pt-4">
+                    Photo:
+                    <input type="file" class="form-control" name="fileToUpload">
+                </div>
+                <div class="d-flex justify-content-end pt-4">
+                    <input type="submit" value="Register" class="btn rounded-pill text-white bg-green w-100 rounded-0" name="submit">
+                </div>
+                <div class="text-end d-flex justify-content-end pt-4 flex-wrap">
+                    <div>Already Registered? <a href="#" class="text-success">Login Here</a></div>
                 </div>
                 <div class="text-end">
                 </div>
