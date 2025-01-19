@@ -54,10 +54,4 @@ As the repository does not currently have any forks or stars, contributions are 
 4. Push your changes to your fork.
 5. Submit a pull request detailing your changes.
 
-## License
-
-This project does not currently specify a license. It's recommended to add a license to clarify usage rights.
-
 ---
-
-*Note: This `README.md` is based on the available information from the repository and may require updates as the project evolves.*
