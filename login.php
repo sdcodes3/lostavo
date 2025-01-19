@@ -18,6 +18,27 @@
                 <div class="heading text-center">
                     Login Page
                 </div>
+                    <?php
+                    if(isset($_COOKIE["loginStatus"])){
+                        if($_COOKIE["loginStatus"] == "error"){
+                            ?>
+                            <div class="text-center text-danger pt-2">
+                                Incorrect Email or Password!! Pl. try again
+                            </div>
+                            <?php
+                            setcookie("loginStatus", "", time(), "/");
+                        }
+                        else if($_COOKIE["loginStatus"] == "alreadyReg"){
+                            ?>
+                            <div class="text-center text-warning pt-2">
+                                You are already registered. Kindly login here!!
+                            </div>
+                            <?php
+                            setcookie("loginStatus", "", time(), "/");
+                        }
+                    }
+                ?>
+
                 <div class="pt-4">
                     Email : 
                     <input type="email" class="form-control" name="uname" id="">

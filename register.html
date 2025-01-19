@@ -28,7 +28,7 @@
                 </div>
                 <div class="pt-4">
                     Password : 
-                    <input type="password" class="form-control" name="pass" id="p1" required>
+                    <input type="password" class="form-control" name="pass" id="p1" required onchange="change(event)">
                 </div>
                 <div class="pt-4">
                     Confirm Password : 
@@ -40,10 +40,12 @@
                     <input type="file" class="form-control" name="fileToUpload" required>
                 </div>
                 <div class="d-flex justify-content-end pt-4">
-                    <input type="submit" value="Register" class="btn rounded-pill text-white bg-green w-100 rounded-0" name="submit">
+                    <button type="submit" id="reg" class="btn rounded-pill text-white bg-green w-100 rounded-0" name="submit">
+                        Register
+                    </button>
                 </div>
                 <div class="text-end d-flex justify-content-end pt-4 flex-wrap">
-                    <div>Already Registered? <a href="login.html" class="text-success">Login Here</a></div>
+                    <div>Already Registered? <a href="login.php" class="text-success">Login Here</a></div>
                 </div>
                 <div class="text-end">
                 </div>
@@ -54,12 +56,16 @@
     <script>
         function change(event){
             let pass = document.getElementById('p1').value;
-            let mmsg = document.querySelector('.msg');
-            if(pass == event.target.value){
-                mmsg.innerHTML = "";
-            }
-            else{
-                mmsg.innerHTML = "Both Password are not same";
+            if((pass != "" || event.target.id == 'p2') || document.getElementById('p2').value != ''){
+                let mmsg = document.querySelector('.msg');
+                if(pass == event.target.value){
+                    mmsg.innerHTML = "";
+                    document.getElementById('reg').classList.remove('disabled');
+                }
+                else{
+                    mmsg.innerHTML = "Both Password are not same";
+                    document.getElementById('reg').classList.add('disabled');
+                }
             }
         };
     </script>

@@ -1,14 +1,14 @@
 .green{
-    color: #9bb817;
+    color: #9bb817 !important;
 }
 
 
 .bg-green:hover{
-    background-color: #738a0a;
+    background-color: #738a0a !important;
 }
 
 .bg-green:active,
 .bg-green:focus,
 .bg-green{
-    background-color: #9bb817;
+    background-color: #9bb817 !important;
 }
